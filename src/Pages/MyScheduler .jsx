@@ -53,7 +53,7 @@ const MyScheduler = () => {
         events={events}
         startAccessor="start"
         endAccessor="end"
-        defaultView="day"
+        defaultView="month"
         views={["day", "week", "month"]}
         style={{ height: 600 }}
         eventPropGetter={(event) => ({

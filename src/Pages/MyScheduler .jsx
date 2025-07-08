@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import '../Pages/MyScheduler.css'
 
 import format from "date-fns/format";
 import parse from "date-fns/parse";
@@ -18,8 +19,7 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const Model = ({ event }) => {
-  
+const Model = ({ event  }) => {
   return (
     <div className="flex justify-center items-center w-[100vw] h-[100vh] fixed bg-sky-100/50 top-0 left-0">
       <div
@@ -55,7 +55,7 @@ const Model = ({ event }) => {
           </div>
         </div>
         <div className="text-center">
-          <button type="submit" className="p-1 px-2 bg-teal-900 rounded-lg">
+          <button type="submit" className="p-1 px-2 bg-teal-900 rounded-lg" >
             Update
           </button>
         </div>
@@ -105,7 +105,7 @@ const MyScheduler = () => {
         endAccessor="end"
         defaultView="month"
         views={["day", "week", "month"]}
-        style={{ height: 600 }}
+        style={{ height: 600}}
         eventPropGetter={(event) => ({
           style: {
             backgroundColor: event.color,

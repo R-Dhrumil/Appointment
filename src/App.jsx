@@ -5,13 +5,15 @@ import { Route, Routes } from "react-router";
 // import Calendar from "./Pages/CalenderComponent";
 import MyScheduler from "./Pages/MyScheduler ";
 import CalenderMap from "./Components/CalenderMap";
+import Dashboard from "./Pages/Dashboard";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<MyScheduler />}></Route>
+        <Route path="/" element={<Dashboard />}></Route>
         <Route path="/calendar" element={<CalenderMap />}></Route>
+        
       </Routes>
     </div>
   );

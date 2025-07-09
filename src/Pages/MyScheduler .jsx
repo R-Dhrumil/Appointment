@@ -19,7 +19,7 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const Model = ({ event  }) => {
+const Model = ({ event , OnUpdate }) => {
   return (
     <div className="flex justify-center items-center w-[100vw] h-[100vh] fixed bg-sky-100/50 top-0 left-0">
       <div
@@ -55,7 +55,7 @@ const Model = ({ event  }) => {
           </div>
         </div>
         <div className="text-center">
-          <button type="submit" className="p-1 px-2 bg-teal-900 rounded-lg" >
+          <button type="submit" className="p-1 px-2 bg-teal-900 rounded-lg" onClick={OnUpdate}>
             Update
           </button>
         </div>
@@ -66,6 +66,9 @@ const Model = ({ event  }) => {
 
 const MyScheduler = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const handleUpdate = () => {
+    setSelectedEvent(null)
+  }
 
   const [event, setEvent] = useState([
     {
@@ -117,7 +120,7 @@ const MyScheduler = () => {
           setSelectedEvent(event);
         }}
       />
-      {selectedEvent ? <Model event={selectedEvent} /> : null}
+      {selectedEvent ? <Model event={selectedEvent} OnUpdate={handleUpdate} /> : null}
     </div>
   );
 };

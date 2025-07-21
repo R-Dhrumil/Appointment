@@ -1,12 +1,63 @@
-# React + Vite
+# 🗓️ Appointopia – Smart Appointment Scheduler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Appointopia is a modern and responsive calendar-based appointment scheduling dashboard built with **React**, featuring event creation/editing, and a smooth user experience.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📅 Interactive calendar using **react-big-calendar**
+- ➕ Create, update, and delete appointments
+- 💻 Responsive design across all screen sizes
+- 🧠 State managed using React hooks
+
+---
+
+## 🔗Live Demo
+
+👉 [Click here to try the app](https://appointment-plum.vercel.app/)
+
+---
+
+## 📸 Screenshots
+
+> Add your screenshots inside `/public` folder and update the file names below.
+
+| Dashboard Light Mode | Dashboard Dark Mode |
+|----------------------|---------------------|
+| ![Light Mode](./public/light-mode.png) | ![Dark Mode](./public/dark-mode.png) |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js
+- **Styling**: Tailwind CSS
+- **Calendar**: react-big-calendar
+- **Routing**: react-router-dom
+- **Date Handling**: date-fns
+
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/R-Dhrumil/Appointment.git
+cd Appointment
+```
+
+## 2. Install dependencies
+```
+npm install
+```
+## 3. Run the app locally
+
+```
+npm run dev
+```
+🧑‍💻 Author
+Made with ❤️ by Dhrumil Rana
+
+📫 [LinkedIn](https://www.linkedin.com/in/rdhrumil/)

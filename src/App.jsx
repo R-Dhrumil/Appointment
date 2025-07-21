@@ -1,21 +1,23 @@
-import React from "react";
-import { Route, Routes } from "react-router";
-// import Hero from "./Pages/Hero";
-// import Login from "./Pages/Login";
-// import Calendar from "./Pages/CalenderComponent";
-import MyScheduler from "./Pages/MyScheduler ";
-import CalenderMap from "./Components/CalenderMap";
+// App.jsx
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
+import AppointmentList from "./Pages/AppointmentList";
 
 const App = () => {
+  const [events, setEvents] = useState([]);
+
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Dashboard />}></Route>
-        <Route path="/calendar" element={<CalenderMap />}></Route>
-        
-      </Routes>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={<Dashboard events={events} setEvents={setEvents} />}
+      />
+      <Route
+        path="/appointments"
+        element={<AppointmentList events={events} setEvents={setEvents} />}
+      />
+    </Routes>
   );
 };
 

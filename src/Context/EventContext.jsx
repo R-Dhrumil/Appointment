@@ -16,7 +16,7 @@ const EventContext = (props) => {
   });
 
   const handleCreate = () => {
-    console.log(events);
+    
 
     const startDate = new Date(`${newEvent.date}T${newEvent.start}`);
     const endDate = new Date(`${newEvent.date}T${newEvent.end}`);

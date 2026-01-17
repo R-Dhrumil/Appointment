@@ -18,17 +18,7 @@ Appointopia is a modern and responsive calendar-based appointment scheduling das
 
 👉 [Click here to try the app](https://appointment-plum.vercel.app/)
 
----
 
-## 📸 Screenshots
-
-> Add your screenshots inside `/public` folder and update the file names below.
-
-| Dashboard Light Mode | Dashboard Dark Mode |
-|----------------------|---------------------|
-| ![Light Mode](./public/light-mode.png) | ![Dark Mode](./public/dark-mode.png) |
-
----
 
 ## 🛠️ Tech Stack
 

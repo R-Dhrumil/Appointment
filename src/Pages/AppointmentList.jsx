@@ -28,7 +28,7 @@ const AppointmentList = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-purple-100">
       {/* Sidebar */}
       <aside className="w-64 bg-white shadow-md p-6">
         <Navbar />
@@ -58,7 +58,6 @@ const AppointmentList = () => {
                   className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 flex gap-2 items-center"
                   onClick={() => {
                     alert("Edit functionality to be implemented");
-                    
                   }}
                 >
                   <span>
@@ -78,12 +77,9 @@ const AppointmentList = () => {
               </div>
             </div>
           ))}
-      {createactive && (
-        <MeetingForm />
-      )}
+          {createactive && <MeetingForm />}
         </div>
       </main>
-
     </div>
   );
 };

@@ -18,16 +18,16 @@ const Home = () => {
   } = useContext(EventDataContext);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-row">
+    <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row">
       {/* Sidebar */}
-      <aside className="w-64 bg-white shadow-md flex flex-col justify-between p-6 ">
+      <aside className="md:w-64 w-full bg-white shadow-md flex flex-col justify-between p-6">
         <Navbar />
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col p-8 bg-purple-100">
+      <main className="flex-1 flex flex-col p-6 md:p-8 bg-purple-100">
         <header className="flex items-center justify-between mb-6">
-          <h1 className="text-3xl font-bold">Calendar</h1>
+          <h1 className="text-2xl md:text-3xl font-bold">Calendar</h1>
           <div className="flex items-center gap-4">
             <button
               onClick={() => setActive(true)}

@@ -1,21 +1,22 @@
 // App.jsx
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Dashboard from "./Pages/Dashboard";
+import Home from "./Pages/Home";
 import AppointmentList from "./Pages/AppointmentList";
 
 const App = () => {
-  const [events, setEvents] = useState([]);
+  
+  
 
   return (
     <Routes>
       <Route
         path="/"
-        element={<Dashboard events={events} setEvents={setEvents} />}
+        element={<Home />}
       />
       <Route
-        path="/appointments"
-        element={<AppointmentList events={events} setEvents={setEvents} />}
+        path="/Appointments"
+        element={<AppointmentList />}
       />
     </Routes>
   );

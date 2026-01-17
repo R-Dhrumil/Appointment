@@ -1,1 +1,24 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+* {
+  scrollbar-width: none;
+  scrollbar-color: #a78bfa transparent;
+}
+
+.rbc-btn-group {
+  button {
+    background-color: #a78bfa !important;
+    font-weight: 500 !important;
+    color: white !important;
+  }
+}
+
+.rbc-btn-group button:hover {
+  background-color: #9810fa !important;
+
+  color: white !important;
+}
+
+.rbc-today {
+  background-color: #f2e7ff !important;
+}
+

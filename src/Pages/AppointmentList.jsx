@@ -1,9 +1,25 @@
 // AppointmentList.jsx
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext , useState } from "react";
+import Navbar from "../Components/Navbar";
 
-const AppointmentList = ({ events, setEvents }) => {
-  const navigate = useNavigate();
+import { EventDataContext } from "../Context/EventContext.jsx";
+import { FaEdit } from "react-icons/fa";
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import MeetingForm from "../Components/MeetingForm.jsx";
+
+const AppointmentList = () => {
+  const {
+    events,
+    setEvents,
+    newEvent,
+    setNewEvent,
+    handleCreate,
+    createactive,
+    setActive,
+  } = useContext(EventDataContext);
+  
+
+  
 
   const handleDelete = (index) => {
     const updated = [...events];
@@ -15,21 +31,7 @@ const AppointmentList = ({ events, setEvents }) => {
     <div className="flex min-h-screen bg-gray-50">
       {/* Sidebar */}
       <aside className="w-64 bg-white shadow-md p-6">
-        <div className="flex items-center mb-8">
-          <span className="font-bold text-xl text-purple-700 mr-2">🗓️</span>
-          <span className="font-bold text-lg">Appointopia</span>
-        </div>
-        <nav className="space-y-3">
-          <button
-            onClick={() => navigate("/")}
-            className="w-full text-left px-3 py-2 rounded-lg hover:bg-purple-100"
-          >
-            📅 Calendar
-          </button>
-          <button className="w-full text-left bg-purple-200 px-3 py-2 rounded-lg font-semibold">
-            📋 Appointment List
-          </button>
-        </nav>
+        <Navbar />
       </aside>
 
       {/* Main Content */}
@@ -53,22 +55,35 @@ const AppointmentList = ({ events, setEvents }) => {
               )}
               <div className="flex gap-2 mt-4">
                 <button
-                  className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
-                  onClick={() => alert("Edit functionality coming soon")}
+                  className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 flex gap-2 items-center"
+                  onClick={() => {
+                    alert("Edit functionality to be implemented");
+                    
+                  }}
                 >
-                  ✏️ Edit
+                  <span>
+                    <FaEdit />
+                  </span>{" "}
+                  Edit
                 </button>
                 <button
-                  className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                  className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 flex gap-2 items-center"
                   onClick={() => handleDelete(index)}
                 >
-                  🗑️ Delete
+                  <span>
+                    <MdOutlineDeleteOutline />
+                  </span>{" "}
+                  Delete
                 </button>
               </div>
             </div>
           ))}
+      {createactive && (
+        <MeetingForm />
+      )}
         </div>
       </main>
+
     </div>
   );
 };

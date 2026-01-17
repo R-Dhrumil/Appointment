@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-
+import { EventDataContext } from "../Context/EventContext";
 import format from "date-fns/format";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
@@ -18,7 +18,11 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const MyScheduler = ({ events }) => {
+const MyScheduler = () => {
+
+const data  = useContext(EventDataContext)
+const events = data.events;
+
   return (
     <div className="p-4 rounded-4xl">
       <Calendar

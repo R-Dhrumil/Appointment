@@ -1,6 +1,6 @@
-# 🗓️ Appointopia – Smart Appointment Scheduler
+# 🗓️ Smart Appointment Scheduler
 
-Appointopia is a modern and responsive calendar-based appointment scheduling dashboard built with **React**, featuring event creation/editing, and a smooth user experience.
+Appoint Scheuler is a modern and responsive calendar-based appointment scheduling dashboard built with **React**, featuring event creation/editing, and a smooth user experience.
 
 
 ---
@@ -13,6 +13,12 @@ Appointopia is a modern and responsive calendar-based appointment scheduling das
 - 🧠 State managed using React hooks
 
 ---
+
+## Old vs New
+
+![App Screenshot](Public/Screenshot%20(206).png)
+![App Screenshot](Public/Screenshot%20(207).png)
+
 
 ## 🔗Live Demo
 
